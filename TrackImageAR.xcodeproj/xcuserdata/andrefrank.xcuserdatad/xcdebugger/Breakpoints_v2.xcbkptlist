@@ -14,8 +14,8 @@
             filePath = "TrackImageAR/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "233"
-            endingLineNumber = "233"
+            startingLineNumber = "230"
+            endingLineNumber = "230"
             landmarkName = "touchesBegan(_:with:)"
             landmarkType = "7">
             <Locations>
@@ -70,54 +70,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "15C127D9-CC90-4BB3-B227-7FAE01E73E08"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TrackImageAR/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "renderer(_:didAdd:for:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "15C127D9-CC90-4BB3-B227-7FAE01E73E08 - ccb725bcf110765f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TrackImageAR.ViewController.renderer(_: __C.SCNSceneRenderer, didAdd: __C.SCNNode, for: __C.ARAnchor) -&gt; ()"
-                  moduleName = "TrackImageAR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrefrank/Downloads/TrackImageAR/TrackImageAR/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "173"
-                  endingLineNumber = "173"
-                  offsetFromSymbolStart = "2828">
-               </Location>
-               <Location
-                  uuid = "15C127D9-CC90-4BB3-B227-7FAE01E73E08 - ccb725bcf110765f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TrackImageAR.ViewController.renderer(_: __C.SCNSceneRenderer, didAdd: __C.SCNNode, for: __C.ARAnchor) -&gt; ()"
-                  moduleName = "TrackImageAR"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/andrefrank/Downloads/TrackImageAR/TrackImageAR/ViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "173"
-                  endingLineNumber = "173"
-                  offsetFromSymbolStart = "2900">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "BD1ABBE2-EBEA-46D9-B236-7338D4B6C10D"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -125,8 +77,8 @@
             filePath = "TrackImageAR/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "ViewController"
             landmarkType = "3">
             <Locations>

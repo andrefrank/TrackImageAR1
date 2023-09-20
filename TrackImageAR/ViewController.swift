@@ -41,8 +41,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             //Do this on main thread, although not sure if necessary
             DispatchQueue.main.async { [self] in
                 self.isPlaying ? avPlayer?.play() : avPlayer?.pause()
+                
+                //Trigger the particle at start
                 if self.isVideoReversed && self.isPlaying {
-                    
+                    //Install particles in container node
                     if let node = getNodeWithName("container"){
                         self.isVideoReversed = false
                         installParticles(node)
@@ -142,7 +144,7 @@ extension ViewController {
         //Add container with subnodes to image anchor node
         node.addChildNode(container)
         
-        //Show it
+        //Show the nodes
         DispatchQueue.main.async {
             
             container.isHidden = false
@@ -176,13 +178,8 @@ extension ViewController {
         //Attach new video scene as content
         videoContainer.geometry?.firstMaterial?.diffuse.contents = videoScene
         
-        //Start to play video with normal speed
+        //Start to play video with normal speed and triiger the particle
         self.isPlaying = true
-        
-        
-        //Particle
-        //installParticles(container)
-            
     }
     
     private func getNodeWithName(_ name:String) -> SCNNode? {
@@ -250,6 +247,7 @@ extension ViewController {
             
             player.seek(to: CMTime.zero,completionHandler:{ success in
                 if success {
+                    //Set state for trigger the particle system at next start
                     self.isVideoReversed = true
                 }
             })
