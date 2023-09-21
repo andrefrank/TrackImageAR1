@@ -37,21 +37,25 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     ///Combines current tracking state of ARImages with manual start/pause video
     /// which lets the video to pause when tracking is off and play video when regain tracking of the ARImage
     private var isPlaying:Bool = false {
-        didSet {
-            //Do this on main thread, although not sure if necessary
-            DispatchQueue.main.async { [self] in
-                self.isPlaying ? avPlayer?.play() : avPlayer?.pause()
-                
-                //Trigger the particle at start
-                if self.isVideoReversed && self.isPlaying {
-                    //Install particles in container node
-                    if let node = getNodeWithName("container"){
-                        self.isVideoReversed = false
-                        installParticles(node)
+        willSet {
+            //Check state change due to tracking ARImage, touch events or first renderer event
+            guard newValue != self.isPlaying else {return}
+            
+                //Do this on main thread, although not sure if necessary
+                DispatchQueue.main.async { [self] in
+                    newValue ? avPlayer?.play() : avPlayer?.pause()
+                    
+                    //Trigger the particle only if video playing begins
+                    if self.isVideoReversed && newValue {
+                        //Install particles in container node
+                        if let node = getNodeWithName("container"){
+                            self.isVideoReversed = false
+                            installParticles(node)
+                        }
                     }
                 }
-            }
-        }
+            
+          }
     }
     
 //MARK: - Viewcontroller Lifecycle management methods
